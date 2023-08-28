@@ -1,0 +1,24 @@
+// where the expression returns a list 表达式是一个list
+// $sizes : 40px,50px,60px
+// @each $size in $sizes{
+//  .icon-#{$size}{
+//    font-size:$size;
+//   }
+// }
+
+//where the expression returns a map 表达式是一个map
+// $icons: ("eye": "\f112", "start": "\f12e", "stop": "\f12f");
+
+// @each $name, $glyph in $icons {
+//   .icon-#{$name}:before {
+//     display: inline-block;
+//     font-family: "Icon Font";
+//     content: $glyph;
+//   }
+// }
+
+@each $key, $value in $theme-colors {
+  .icon-#{$key} {
+    color:$value;
+  }
+}
